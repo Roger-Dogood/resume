@@ -1,0 +1,266 @@
+@import 'normalize';
+
+html, body, address,
+main, footer, button,
+input, select, textarea,
+h1, h2, p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background: #EEE;
+}
+
+address {
+    font-style: normal;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin-top: 1rem;
+}
+
+h2 {
+    font-size: 1.27rem;
+    text-transform: uppercase;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #555;
+    transition: color 0.2s, box-shadow 0.2s, border 0.2s;
+
+    &:hover {
+        color: #FFF;
+        border: none;
+        box-shadow: inset 0 -1.2rem 0 0 hsla(0, 0%, 33%, 0.8);
+    }
+}
+
+.wrapper {
+    max-width: 49rem;
+    padding: 1rem;
+    margin: auto;
+    background: #FFF;
+
+    @media screen and (min-width: 550px) {
+        padding: 4rem;
+        box-shadow: 0 0 3px 2px hsla(0, 0%, 0%, 0.5);
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index {
+    background: cornflowerblue;
+    color: #FFF;
+
+    .resume-selection {
+        margin: 1rem;
+        @media screen and (min-width: 550px) {
+            width: 75%;
+            margin: auto;
+        }
+        @media screen and (min-width: 850px) {
+            width: 50%;
+        }
+    }
+
+    dl {
+        position: relative;
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+
+    h1,dt {
+        flex: 100%;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 0 0.1rem 0 hsla(0, 0%, 0%, 0.5);
+
+        @media screen and (min-width: 700px) {
+            font-size: 3rem;
+        }
+    }
+
+    dt {
+        font-style: italic;
+        font-size: 2rem;
+
+        @media screen and (max-width: 699px) {
+            top: -1rem;
+        }
+
+        @media screen and (min-width: 700px) {
+            position: absolute;
+            right: 4rem;
+            bottom: -2.1rem;
+        }
+    }
+
+    dd {
+        margin: 0 0 2rem;
+        flex: 100%;
+
+        &:before {
+            display: none;
+        }
+
+        a {
+            padding: 1rem 1rem 1rem 0.2rem;
+            color: #FFF;
+            font-style: italic;
+            font-variant: small-caps;
+            text-decoration: none;
+            border: none;
+            border-radius: 1rem;
+            text-shadow: 0 0.1rem 0 hsla(0, 0%, 0%, 0.5);
+
+            &:before:first-of-type {
+                display: none;
+                content: "";
+            }
+
+            &:before {
+                content: "\f105";
+                font-family: 'FontAwesome';
+                margin-right: 1rem;
+                font-style: normal;
+                font-size: 2rem;
+            }
+
+            &:hover {
+                background: indianred;
+                text-shadow: none;
+                box-shadow: 0 0 0.1rem 0 hsla(0, 0%, 0%, 0.5);
+            }
+        }
+    }
+}
+
+.branding {
+    h1 {
+        font-size: 4.5rem;
+        font-weight: normal;
+        font-variant: small-caps;
+        line-height: 4rem;
+        border-bottom: 2px groove #000;
+    }
+
+    .contact-info {
+        margin-top: 2px;
+    }
+
+    span {
+        padding-right: 2px;
+        border-right: 1px solid #555;
+
+        &:last-child {
+            padding: 0;
+            border: none;
+        }
+    }
+}
+
+.highlights {
+
+
+    .row {
+        @media screen and (min-width: 550px) {
+            width: 75%;
+            margin-left: 1.5rem;
+        }
+
+        @media screen and (min-width: 700px) {
+            margin-left: 11.5rem;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+
+        @media screen and (min-width: 550px) {
+            display: inline-block;
+            margin-right: 10%;
+            vertical-align: top;
+            width: 40%;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    li {
+        padding-left: 1rem;
+        text-indent: -1rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    dl {
+        margin: 0 0 0 10rem;
+    }
+}
+
+dt {
+    font-size: 1.1rem;
+}
+
+dd {
+    margin-bottom: 0.2rem;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "\f105";
+        font-family: 'FontAwesome';
+        top: 0.2rem;
+        left: -1rem;
+        font-size: 0.8rem;
+    }
+}
+
+.experience,
+.education {
+    position: relative;
+
+    .date {
+        font-weight: 700;
+        @media screen and (min-width: 700px) {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .position {
+        display: block;
+    }
+
+    .location:before {
+        content: "\2013\00a0";
+    }
+
+    .degree:after {
+        content: ":\00a0"
+    }
+
+    .programline:after {
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
