@@ -1,0 +1,90 @@
+{
+  "resume": [
+    {
+      "summary": ".Net C# Application Developer bringing superior design and debugging capabilities, innovative problem solving skills and dedication to quality.",
+      "highlights": [
+        "Consistently meets deadlines",
+        "Able to adapt and learn new concepts quickly",
+        "Excellent analytical skills",
+        "Cooperative team member",
+        "Excel in C# .Net, SQL Application Development",
+        "Experience with Microsoft Tools (ex: Visual Studio, SQL Server Management Studio, etc.)",
+        "Comfortable in any development environment",
+        "Experience with source control (ex: Git, Visual Studio Online)"
+      ],
+      "accomplishments": [
+        {
+          "title": "Communication",
+          "description": [
+            "Demonstrated strong communication skills through numerous talks/speeches given as Vice President of Student Council."
+          ]
+        },
+        {
+          "title": "Interpersonal Skills",
+          "description": [
+            "Maintained more than satisfactory relations with Residents, Family Members, and Staff throughout entire two years as CareProvider in a Dementia Care Facility."
+          ]
+        },
+        {
+          "title": "Research",
+          "description": [
+            "Researched Object Oriented PHP and developed custom MVC framework which resulted in presenting two hour lecture on subject."
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "date": "08/2013 to Current",
+          "position": "Vice President of Student Council",
+          "company": "Clover Park Technical College",
+          "location": "Lakewood, WA",
+          "description": [
+            "Appoint students to all college, standing, tenure and ad-hoc committees.",
+            "Serve as Chair of the Services &amp; Activities Budget Committee.",
+            "Serve on a number of committees. (ex: College Assembly, Curriculum Committee, Tenure)",
+            "Draft Initiative recommendations as needed."
+          ]
+        },
+        {
+          "date": "01/2013 to 08/2013",
+          "position": "Workstudy TA",
+          "company": "Clover Park Technical College",
+          "location": "Lakewood, WA",
+          "description": [
+            "Interact with students at various levels in CIT Program throughout the day to assist with any problem areas.",
+            "Help setup, research, and design Game Programming Class on Canvas.",
+            "Various CIT projects. (ex: Script to add students automatically from CSV file)"
+          ]
+        },
+        {
+          "date": "02/2011 to 07/2013",
+          "position": "CareProvider",
+          "company": "Hearthside Manor",
+          "location": "University Place, WA",
+          "description": [
+            "Utilized strong assessment skills to determine necessary patient care.",
+            "Provided primary resident care and assistance with daily living activities in accordance with resident care policies and procedures.",
+            "Frequently commended for maintaining the safety, respect and dignity of residents.",
+            "Trained new CareProvider staff to provide top-quality patient care."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "date": "2015",
+          "degree": "Computer Information Technology AAT Degree",
+          "programline": "CIT Web Programming",
+          "school": "Clover Park Technical College",
+          "location": "Lakewood, WA, USA",
+          "description": [
+            "Advanced Data and Logic Structures in Object Oriented Programming.",
+            "Developed data driven applications utilizing Entity Framework and .Net C#.",
+            "Overview of Agile and SCRUM methodology in each of our .Net courses.",
+            "Numerous team based projects.",
+            "Maintained 4.0 GPA each quarter."
+          ]
+        }
+      ]
+    }
+  ]
+}

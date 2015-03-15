@@ -179,14 +179,9 @@ a {
 
 
     .row {
-        @media screen and (min-width: 550px) {
-            width: 75%;
-            margin-left: 1.5rem;
-        }
-
-        @media screen and (min-width: 700px) {
-            margin-left: 11.5rem;
-        }
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
     }
 
     ul {
@@ -198,11 +193,11 @@ a {
             display: inline-block;
             margin-right: 10%;
             vertical-align: top;
-            width: 40%;
+            margin-left: 1.5rem;
         }
 
-        &:last-child {
-            margin: 0;
+        @media screen and (min-width: 700px) {
+            margin-left: 11.5rem;
         }
     }
 

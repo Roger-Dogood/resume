@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     gutil       = require('gulp-util'),
-    browserify  = require('gulp-browserify'),
+    browserify  = require('browserify'),
+    transform   = require('vinyl-transform'),
     compass     = require('gulp-compass'),
     browserSync = require('browser-sync'),
     uglify      = require('gulp-uglify'),
@@ -33,9 +34,14 @@ gulp.task('resume', function() {
 });
 
 gulp.task('js', function() {
+    var browserified = transform(function(filename) {
+    var b = browserify(filename);
+    return b.bundle();
+  });
+
     return gulp.src(devDir + 'js/*.js')
+        .pipe(browserified)
         .pipe(concat('script.js'))
-        .pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest(outputDir + 'js'));
 });
