@@ -180,9 +180,12 @@ a {
 
 
     .row {
-        -webkit-columns: 150px 2;
-        -moz-columns: 150px 2;
-        columns: 150px 2;
+
+        @media print, screen and (min-width: 550px) {
+            -webkit-columns: 150px 2;
+            -moz-columns: 150px 2;
+            columns: 150px 2;
+        }
     }
 
     ul {
@@ -232,6 +235,10 @@ dd {
 .experience,
 .education {
     position: relative;
+
+    dt {
+        margin-top: 1rem;
+    }
 
     .date {
         font-weight: 700;
