@@ -7,10 +7,6 @@ h1, h2, p {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-body {
-    background: #EEE;
-}
-
 address {
     font-style: normal;
 }
@@ -48,7 +44,7 @@ a {
     margin: auto;
     background: #FFF;
 
-    @media screen and (min-width: 550px) {
+    @media print, screen and (min-width: 550px) {
         padding: 4rem;
         box-shadow: 0 0 3px 2px hsla(0, 0%, 0%, 0.5);
     }
@@ -59,17 +55,22 @@ a {
     flex-wrap: wrap;
 }
 
+.net {
+    background: #EEE;
+    color: #333;
+}
+
 .index {
     background: cornflowerblue;
     color: #FFF;
 
     .resume-selection {
         margin: 1rem;
-        @media screen and (min-width: 550px) {
+        @media print, screen and (min-width: 550px) {
             width: 75%;
             margin: auto;
         }
-        @media screen and (min-width: 850px) {
+        @media print, screen and (min-width: 850px) {
             width: 50%;
         }
     }
@@ -88,7 +89,7 @@ a {
         text-transform: uppercase;
         text-shadow: 0 0.1rem 0 hsla(0, 0%, 0%, 0.5);
 
-        @media screen and (min-width: 700px) {
+        @media print, screen and (min-width: 700px) {
             font-size: 3rem;
         }
     }
@@ -97,11 +98,11 @@ a {
         font-style: italic;
         font-size: 2rem;
 
-        @media screen and (max-width: 699px) {
+        @media print, screen and (max-width: 699px) {
             top: -1rem;
         }
 
-        @media screen and (min-width: 700px) {
+        @media print, screen and (min-width: 700px) {
             position: absolute;
             right: 4rem;
             bottom: -2.1rem;
@@ -110,7 +111,7 @@ a {
 
     dd {
         margin: 0 0 2rem;
-        @media screen and (max-width: 700px) {
+        @media print, screen and (max-width: 700px) {
             flex: 100%;
         }
 
@@ -189,14 +190,11 @@ a {
         padding: 0;
         list-style-position: inside;
 
-        @media screen and (min-width: 550px) {
-            display: inline-block;
-            margin-right: 10%;
-            vertical-align: top;
+        @media print, screen and (min-width: 550px) {
             margin-left: 1.5rem;
         }
 
-        @media screen and (min-width: 700px) {
+        @media print, screen and (min-width: 700px) {
             margin-left: 11.5rem;
         }
     }
@@ -207,7 +205,7 @@ a {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media print, screen and (min-width: 700px) {
     dl {
         margin: 0 0 0 10rem;
     }
@@ -237,7 +235,7 @@ dd {
 
     .date {
         font-weight: 700;
-        @media screen and (min-width: 700px) {
+        @media print, screen and (min-width: 700px) {
             position: absolute;
             left: 0;
         }
@@ -261,4 +259,47 @@ dd {
         height: 0;
         visibility: hidden;
     }
+}
+
+@media print {
+    body, section {
+        width: 100%;
+        color: #000;
+        background: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        border: 0;
+    }
+
+    .net {
+        background: none;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+
+    section {
+        page-break-before: avoid;
+    }
+
+    ul, img {
+        page-break-inside: avoid;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    @page {
+        size: 8.5in 11in;
+        margin: 1.5cm 2cm;
+   }
 }
