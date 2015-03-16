@@ -10,3 +10,14 @@ $(function() {
   }); //getJSON
 
 }); //function
+
+$(function() {
+    var   Mustache = require('mustache');
+
+  $.getJSON('../js/data.json', function(data) {
+    var template = $('#headertpl').html();
+    var html = Mustache.to_html(template, data);
+    $('#header').html(html);
+  }); //getJSON
+
+}); //function

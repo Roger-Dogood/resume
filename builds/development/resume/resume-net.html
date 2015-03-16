@@ -12,14 +12,7 @@
 <body class="net">
     <div class="wrapper">
 
-        <header id="header" class="branding">
-            <h1><strong>Matthew</strong> Dahl</h1>
-            <div class="contact-info">
-                <span class="address">8510 Idlewood Dr. SW, Lakewood WA 98498</span>
-                <span class="phone"><a href="tel:2533532451" title="Cell Phone">C: 253.353.2451</a></span>
-                <span class="email"><a href="mailto:dahl8677@student.cptc.edu?subject=feedback" title="Email">dahl8677@student.cptc.edu</a></span>
-            </div>
-        </header><!-- /header -->
+        <header id="header" class="branding"></header><!-- /header -->
 
         <main role="main" id="resume"></main><!-- /main -->
 
@@ -28,12 +21,24 @@
     </div><!-- /.wrapper -->
 
 <script src="../js/script.js"></script>
+<script id="headertpl" type="text/template">
+    {{#resume}}
+    {{#header}}
+    <h1><strong>{{first_name}}</strong> {{last_name}}</h1>
+    <div class="contact-info">
+        <span class="address">{{address}}</span>
+        <span class="phone"><a href="tel:{{phone}}" title="Phone">{{phone}}</a></span>
+        <span class="email"><a href="mailto:{{email}}?subject=feedback" title="Email">{{email}}</a></span>
+    </div>
+    {{/header}}
+    {{/resume}}
+</script>
 <script id="resumetpl" type="text/template">
     {{#resume}}
     <section class="summary">
         <h2>Summary</h2>
         <p>{{summary}}</p>
-    </section>
+    </section><!-- /.summary -->
     <section class="highlights">
         <h2>Highlights</h2>
         <ul class="row">
@@ -41,7 +46,7 @@
             <li>{{.}}</li>
         {{/highlights}}
         </ul>
-    </section>
+    </section><!-- /.highlights -->
     <section class="accomplishments">
         <h2>Accomplishments</h2>
         <dl>
@@ -52,7 +57,7 @@
             {{/description}}
         {{/accomplishments}}
         </dl>
-    </section>
+    </section><!-- /.accomplishments -->
     <section class="experience">
         <h2>Experience</h2>
         <dl>
@@ -68,7 +73,7 @@
             {{/description}}
         {{/experience}}
         </dl>
-    </section>
+    </section><!-- /.experience -->
     <section class="education">
         <h2>Education</h2>
         <dl>
@@ -85,7 +90,7 @@
             {{/description}}
         {{/education}}
         </dl>
-    </section>
+    </section><!-- /.education -->
     {{/resume}}
 </script>
 
