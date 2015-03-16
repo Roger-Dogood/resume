@@ -193,7 +193,7 @@ a {
         padding: 0;
         list-style-position: inside;
 
-        @media print, screen and (min-width: 550px) {
+        @media print, screen {
             margin-left: 1.5rem;
         }
 
