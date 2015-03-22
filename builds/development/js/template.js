@@ -1,8 +1,7 @@
-var $ = require("jquery");
+var $        = require("jquery"),
+    Mustache = require('mustache');
 
 $(function() {
-    var   Mustache = require('mustache');
-
   $.getJSON('../js/data.json', function(data) {
     var template = $('#resumetpl').html();
     var html = Mustache.to_html(template, data);
@@ -12,8 +11,6 @@ $(function() {
 }); //function
 
 $(function() {
-    var   Mustache = require('mustache');
-
   $.getJSON('../js/data.json', function(data) {
     var template = $('#headertpl').html();
     var html = Mustache.to_html(template, data);
