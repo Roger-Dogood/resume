@@ -1,14 +1,13 @@
 {
+  "header": {
+    "first_name": "Matthew",
+    "last_name": "Dahl",
+    "address": "8510 Idlewood Dr. SW, Lakewood WA 98498",
+    "phone": "253.353.2451",
+    "email": "dahl8677@student.cptc.edu"
+  },
   "resume": [
     {
-      "header":
-      {
-        "first_name": "Matthew",
-        "last_name": "Dahl",
-        "address": "8510 Idlewood Dr. SW, Lakewood WA 98498",
-        "phone": "253.353.2451",
-        "email": "dahl8677@student.cptc.edu"
-      },
       "summary": ".Net C# Application Developer bringing superior design and debugging capabilities, innovative problem solving skills and dedication to quality.",
       "highlights": [
         "Consistently meets deadlines",
